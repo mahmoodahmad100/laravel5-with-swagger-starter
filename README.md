@@ -1,2 +1,2 @@
 # laravel5 with swagger starter
-for API projects
+for API-based projects
