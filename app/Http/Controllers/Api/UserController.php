@@ -69,17 +69,17 @@ class UserController extends ApiController
      *              required={"name", "email", "password"},
      *              @SWG\Property(
      *                  property="name",
-     *                  type="number",
+     *                  type="string",
      *                  description="the name of the user"
      *              ),
      *              @SWG\Property(
      *                  property="email",
-     *                  type="number",
+     *                  type="string",
      *                  description="the email of the user"
      *              ),
      *              @SWG\Property(
      *                  property="password",
-     *                  type="number",
+     *                  type="string",
      *                  description="the password of the user"
      *              )
      *         ),
@@ -171,17 +171,17 @@ class UserController extends ApiController
      *              required={},
      *              @SWG\Property(
      *                  property="name",
-     *                  type="number",
+     *                  type="string",
      *                  description="the name of the user"
      *              ),
      *              @SWG\Property(
      *                  property="email",
-     *                  type="number",
+     *                  type="string",
      *                  description="the email of the user"
      *              ),
      *              @SWG\Property(
      *                  property="password",
-     *                  type="number",
+     *                  type="string",
      *                  description="the password of the user"
      *              )
      *         ),
