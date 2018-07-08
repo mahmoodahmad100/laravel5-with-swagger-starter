@@ -1,0 +1,16 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "title": "Test Project API",
+        "description": "Test System API Documentation (please see the 'Auth' section first)",
+        "version": "1.0.0"
+    },
+    "host": "",
+    "basePath": "/project_root_dir/public/api",
+    "schemes": [
+        "http",
+        "https"
+    ],
+    "paths": {},
+    "definitions": {}
+}
