@@ -12,6 +12,121 @@
         "https"
     ],
     "paths": {
+        "/auth/login": {
+            "post": {
+                "tags": [
+                    "Auth"
+                ],
+                "summary": "Get a JWT via given credentials.",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "data",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "required": [
+                                "email",
+                                "password"
+                            ],
+                            "properties": {
+                                "email": {
+                                    "description": "user email",
+                                    "type": "string"
+                                },
+                                "password": {
+                                    "description": "user password",
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful action."
+                    }
+                }
+            }
+        },
+        "/auth/me": {
+            "get": {
+                "tags": [
+                    "Auth"
+                ],
+                "summary": "Get the authenticated User.",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "Bearer + token",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful action."
+                    }
+                }
+            }
+        },
+        "/auth/logout": {
+            "get": {
+                "tags": [
+                    "Auth"
+                ],
+                "summary": "Log the user out (Invalidate the token).",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "Bearer + token",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful action."
+                    }
+                }
+            }
+        },
+        "/auth/refresh": {
+            "get": {
+                "tags": [
+                    "Auth"
+                ],
+                "summary": "Refresh a token.",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "Bearer + token",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful action."
+                    }
+                }
+            }
+        },
         "/users": {
             "get": {
                 "tags": [
@@ -68,15 +183,15 @@
                             "properties": {
                                 "name": {
                                     "description": "the name of the user",
-                                    "type": "number"
+                                    "type": "string"
                                 },
                                 "email": {
                                     "description": "the email of the user",
-                                    "type": "number"
+                                    "type": "string"
                                 },
                                 "password": {
                                     "description": "the password of the user",
-                                    "type": "number"
+                                    "type": "string"
                                 }
                             },
                             "type": "object"
@@ -183,15 +298,15 @@
                             "properties": {
                                 "name": {
                                     "description": "the name of the user",
-                                    "type": "number"
+                                    "type": "string"
                                 },
                                 "email": {
                                     "description": "the email of the user",
-                                    "type": "number"
+                                    "type": "string"
                                 },
                                 "password": {
                                     "description": "the password of the user",
-                                    "type": "number"
+                                    "type": "string"
                                 }
                             },
                             "type": "object"
