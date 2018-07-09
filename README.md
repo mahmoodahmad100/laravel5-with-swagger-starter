@@ -9,5 +9,5 @@ for API-based projects
 * Generate the application key using `php artisan key:generate`
 * Generate the JWTAuth secret key using `php artisan jwt:secret`
 * Clear the config cache by running `php artisan config:cache`
-* Finally run `php artisan migrate`
-* Go to `app/Http/Controllers/Api/UserController.php` to know how to use swagger
+* Finally Go to `app/Http/Controllers/Api/UserController.php` to know how to use swagger
+* enjoy 😃 !
