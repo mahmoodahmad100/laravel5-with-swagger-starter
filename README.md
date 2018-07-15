@@ -1,7 +1,7 @@
 # laravel5 with swagger starter
 for API-based projects
 
-### Getting started
+### Getting started:
 * You do not have a .env file in the project root folder so copy .env.example and save it as .env
 * In .env file update the database info
 * In .env file add `L5_SWAGGER_GENERATE_ALWAYS=true`
