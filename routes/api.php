@@ -25,4 +25,4 @@ Route::group(['prefix' => 'auth'],function(){
 });
 
 /* User */ 
-Route::resource('users','Api\UserController');
+Route::apiResource('users','Api\UserController');
