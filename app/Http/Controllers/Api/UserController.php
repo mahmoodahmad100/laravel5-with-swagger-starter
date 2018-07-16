@@ -11,7 +11,7 @@ use App\Models\User;
 class UserController extends ApiController
 {
     /**
-     * Display a listing of the resource..
+     * Display a listing of the resource.
      *
      * @param  object  $users
      * @return \Illuminate\Http\Response
