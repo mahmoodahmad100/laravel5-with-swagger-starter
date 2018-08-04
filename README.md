@@ -11,3 +11,7 @@ for API-based projects
 * Clear the config cache by running `php artisan config:cache`
 * Finally Go to `app/Http/Controllers/Api/UserController.php` to know how to use swagger
 * enjoy 😃 !
+
+### comming soon:
+* Laravel Mutators
+* Resources
