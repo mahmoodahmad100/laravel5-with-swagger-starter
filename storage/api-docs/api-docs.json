@@ -6,7 +6,7 @@
         "version": "1.0.0"
     },
     "host": "",
-    "basePath": "/project_root_dir/public/api",
+    "basePath": "/project_root_dir/api",
     "schemes": [
         "http",
         "https"

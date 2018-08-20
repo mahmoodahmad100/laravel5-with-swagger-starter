@@ -9,7 +9,7 @@ use Illuminate\Http\Request;
  * @package App\Http\Controllers
  *
  * @SWG\Swagger(
- *     basePath="/project_root_dir/public/api",
+ *     basePath="/project_root_dir/api",
  *     host="",
  *     schemes={"http", "https"},
  *     @SWG\Info(
