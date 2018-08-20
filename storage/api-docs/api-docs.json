@@ -132,7 +132,7 @@
                 "tags": [
                     "User"
                 ],
-                "summary": "Display a listing of the resource..",
+                "summary": "Display a listing of the resource.",
                 "produces": [
                     "application/json"
                 ],
