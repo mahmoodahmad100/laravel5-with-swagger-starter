@@ -1,5 +1,6 @@
 # laravel5 with swagger starter
-for API-based projects
+* for API-based projects
+* the version of this Laravel project is `5.5`
 
 ### Getting started:
 * You do not have a .env file in the project root folder so copy .env.example and save it as .env
