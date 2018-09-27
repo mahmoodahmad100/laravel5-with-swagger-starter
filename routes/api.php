@@ -19,6 +19,7 @@ header('Access-Control-Allow-Headers: Authorization, Content-Type');
 /* AUTH */ 
 Route::group(['prefix' => 'auth'],function(){
     Route::post('login', 'Api\AuthController@login')->name('login');
+    Route::patch('update', 'Api\AuthController@update');
     Route::get('logout', 'Api\AuthController@logout');
     Route::get('refresh', 'Api\AuthController@refresh');
     Route::get('me', 'Api\AuthController@me');
