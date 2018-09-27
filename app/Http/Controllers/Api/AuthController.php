@@ -90,6 +90,64 @@ class AuthController extends ApiController
     }
 
     /**
+     * update the data of the authenticated user.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     *
+     * @SWG\Patch(
+     *     path="/auth/update",
+     *     produces={"application/json"},
+     *     tags={"Auth"},
+     *     @SWG\Parameter(
+     *         name="Authorization",
+     *         in="header",
+     *         description="Bearer + token",
+     *         required=true,
+     *         type="string"
+     *     ),
+     *     @SWG\Parameter(
+     *         name="data",
+     *         required=true,
+     *         in="body",
+     *         @SWG\Schema(
+     *              type="object",
+     *              required={},
+     *              @SWG\Property(
+     *                  property="name",
+     *                  type="string",
+     *                  description="user name"
+     *              ),
+     *              @SWG\Property(
+     *                  property="email",
+     *                  type="string",
+     *                  description="user email"
+     *              ),
+     *              @SWG\Property(
+     *                  property="password",
+     *                  type="string",
+     *                  description="user password"
+     *              )
+     *         ),
+     *     ),
+     *     @SWG\Response(
+     *         response=200,
+     *         description="successful action."
+     *     )
+     * )
+     */
+    public function update(UserRequest $request)
+    {
+        auth()->update([
+            'name'     => $request->name,
+            'email'    => $request->email,
+            'password' => bcrypt($request->password)
+        ]);
+
+        return response()->json('successful action.',200);
+    }
+
+    /**
      * Log the user out (Invalidate the token).
      *
      * @return \Illuminate\Http\JsonResponse
