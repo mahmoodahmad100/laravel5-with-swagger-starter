@@ -26,25 +26,25 @@ class UserRequest extends FormRequest
         switch ($this->method())  {
             case 'GET':
             case 'DELETE': {
-                    return [];
-                }
+                return [];
+            }
             case 'POST': {
-                    return [
-                        'name'     => 'required|min:3|max:50',
-                        'email'    => 'required|email',
-                        'password' => 'required|min:5|max:20'
-                    ];
-                }
+                return [
+                    'name'     => 'required|min:3|max:50',
+                    'email'    => 'required|email',
+                    'password' => 'required|min:5|max:20'
+                ];
+            }
             case 'PUT': {
-                    return [];
-                }
+                return [];
+            }
             case 'PATCH': {
-                    return [
-                        'name'     => 'nullable|min:3|max:50',
-                        'email'    => 'nullable|email',
-                        'password' => 'nullable|min:5|max:20'
-                    ];
-                }
+                return [
+                    'name'     => 'nullable|min:3|max:50',
+                    'email'    => 'nullable|email',
+                    'password' => 'nullable|min:5|max:20'
+                ];
+            }
         }
     }
 }
