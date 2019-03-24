@@ -202,5 +202,4 @@ class AuthController extends ApiController
         $token = auth()->refresh();
         return response()->json(['data' => compact('token')]);
     }
-
 }
